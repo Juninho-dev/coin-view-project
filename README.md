@@ -4,6 +4,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 While this project uses Vue.js, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
+Project use API https://docs.coingecko.com/v3.0.1/reference/simple-price
+Project use Vue 3 + Vite + TailwindCSS + Axios
+Project is deployed on Vercel
+I'm doing the project based on the website https://www.coingecko.com/
 ## Deploy Your Own
 
 Deploy your own Vite project with Vercel.
