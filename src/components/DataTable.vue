@@ -30,7 +30,7 @@
                 />
                 {{ coin.name }}
               </td>
-              <td class="whitespace-nowrap px-6 py-4">{{ coin.price }}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{ formatPriceToCurrency(coin.price) }}</td>
             </tr>
             </tbody>
           </table>
@@ -42,16 +42,23 @@
 
 <script lang="ts">
 import { ICoin } from "@/interfaces/coin";
+import { PropType } from "vue";
 
 export default {
   name: 'DataTable',
   props: {
     data: {
-      type: Array as () => ICoin[],
+      type: Array as PropType<ICoin[]>,
       required: true
     }
   },
   methods: {
+    formatPriceToCurrency(price: number) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      }).format(price)
+    },
     handleClickCoin(coin: ICoin) {
       console.log(coin)
     }
