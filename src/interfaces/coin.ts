@@ -1,5 +1,5 @@
 export interface ICoin {
     name: string
-    price: number
+    current_price: number
     image: string
 }

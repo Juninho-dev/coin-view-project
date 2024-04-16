@@ -12,3 +12,10 @@ export interface ICoinList {
         [key: string]: string
     }
 }
+
+export interface ICoinMarketList {
+    id: string
+    name: string
+    image: string
+    current_price: number
+}

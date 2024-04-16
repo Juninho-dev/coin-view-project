@@ -1,5 +1,5 @@
 import api from "@/services/api"
-import { ICoinList, ISimplePrice } from "@/interfaces/gecko";
+import { ICoinMarketList, ISimplePrice } from "@/interfaces/gecko";
 
 export const getSimplePriceByIds = async (ids: string[]) => {
     const { data } = await api.get<ISimplePrice>("/simple/price", {
@@ -12,8 +12,10 @@ export const getSimplePriceByIds = async (ids: string[]) => {
     return data
 }
 
-export const getCoinList = async () => {
-    const { data } = await api.get<ICoinList[]>("/coins/list")
+export const getCoinMarketList = async (vs_currency: string[]) => {
+    const { data } = await api.get<ICoinMarketList[]>("/coins/markets", {
+        params: { vs_currency: vs_currency.join(",") },
+    })
 
     return data
 }

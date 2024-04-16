@@ -30,7 +30,7 @@
                 />
                 {{ coin.name }}
               </td>
-              <td class="whitespace-nowrap px-6 py-4">{{ formatPriceToCurrency(coin.price) }}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{ formatPriceToCurrency(coin.current_price) }}</td>
             </tr>
             </tbody>
           </table>
