@@ -2,7 +2,7 @@
   <div class="p-10 container mx-auto">
     <h1 class="text-2xl font-bold">Cryptocurrency Prices</h1>
     <div class="mt-3">
-      <data-table :value="coins" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]" striped-rows selection-mode="single" @select="handleClickCoin">
+      <data-table :value="coins" paginator :rows="10" :rowsPerPageOptions="[5, 10, 20, 50]" striped-rows selection-mode="single" @select="handleClickCoin">
         <column field="id" header="#"/>
         <column field="name" header="Coin">
           <template #body="slotProps">
